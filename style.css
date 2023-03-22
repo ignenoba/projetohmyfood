@@ -1,0 +1,383 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,300&display=swap");
+*, ::before ::after {
+  box-sizing: border-box;
+}
+
+body {
+  border: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  padding: 0 7rem;
+}
+@media (max-width: 1000px) {
+  main {
+    padding: 0 1rem;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  font-family: "shrikhand", cursive;
+  text-align: center;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  padding: 0.2rem;
+  margin: 0;
+  position: relative;
+}
+
+.domicile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #f3f3f3;
+  text-align: center;
+  padding: 0.5rem;
+}
+.domicile i {
+  font-size: 1.5rem;
+}
+
+/*bienvenue*/
+.bienvenue {
+  text-align: center;
+}
+.bienvenue h2 {
+  font-size: 2rem;
+}
+.bienvenue p {
+  font-size: 1rem;
+}
+.bienvenue button {
+  color: white;
+  font-weight: 100;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 2px 1px 8px -3px #000000;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  background-color: #686868;
+  cursor: pointer;
+  transition-duration: 0.25s;
+  margin-top: 1rem;
+}
+.bienvenue button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+.fontionnement {
+  counter-reset: etape;
+  margin-bottom: 2rem;
+}
+.fontionnement ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+@media (max-width: 900px) {
+  .fontionnement ol {
+    flex-direction: column;
+  }
+}
+.fontionnement li {
+  position: relative;
+  list-style-type: none;
+  background-color: #f6f6f6;
+  padding: 1.5rem 2rem;
+  flex-grow: 1;
+  border-radius: 1rem;
+  box-shadow: 2px 1px 8px -3px #000000;
+}
+.fontionnement li::before {
+  content: counter(etape);
+  counter-increment: etape;
+  color: white;
+  background-color: #9306dc;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: absolute;
+  left: -1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.fontionnement li:hover {
+  transform: scale(1.02);
+}
+.fontionnement li i.fas {
+  margin-right: 1rem;
+  color: #7e7e7e;
+  font-size: 1.5rem;
+}
+
+#page1 .resto {
+  background-color: #f6f6f6;
+  margin-bottom: 2rem;
+}
+#page1 .resto .menu_resto {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+#page1 .resto .menu_resto .nouveau {
+  position: relative;
+}
+#page1 .resto .menu_resto .nouveau::before {
+  content: "nouveau";
+  position: absolute;
+  height: 2rem;
+  width: 5rem;
+  background-color: #99e2d0;
+  color: #1b6150;
+  display: grid;
+  place-items: center;
+  right: 1rem;
+  top: 1rem;
+}
+#page1 .resto .carte {
+  flex-grow: 1;
+  min-width: 30rem;
+}
+#page1 .resto .carte img {
+  width: 100%;
+  content: fit;
+}
+#page1 .resto .carte .image_carte {
+  height: 15rem;
+  border-radius: 1rem 1rem 0 0;
+  background-size: cover;
+}
+#page1 .resto .carte .image-1 {
+  background-image: url("./images/menu1.jpg");
+}
+#page1 .resto .carte .image-2 {
+  background-image: url("./images/menu2.jpg");
+}
+#page1 .resto .carte .image-3 {
+  background-image: url("./images/menu3.jpg");
+}
+#page1 .resto .carte .image-4 {
+  background-image: url("./images/menu4.jpg");
+}
+#page1 .resto .carte .carte_descrip {
+  position: relative;
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
+}
+#page1 .resto .carte .carte_descrip h3,
+#page1 .resto .carte .carte_descrip p {
+  padding: 0.3rem;
+}
+#page1 .resto .carte .carte_descrip i {
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#page1 .resto .carte .carte_descrip .fas {
+  color: transparent;
+  background-image: linear-gradient(0deg, rgb(147, 86, 220), rgb(255, 121, 218));
+  -webkit-background-clip: text;
+  background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+#page1 .resto .carte .carte_descrip:hover .fas {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.2);
+}
+
+footer {
+  background-color: #252525;
+  padding: 1rem 2rem;
+  color: white;
+}
+footer h2 {
+  font-family: "Shrikhand", "sans-serif";
+  font-weight: 500;
+  padding: 1rem 0;
+}
+footer p {
+  padding: 0.2rem;
+}
+
+body {
+  background-color: white;
+}
+
+@keyframes car {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+#page_gout .img_gout img {
+  width: 100%;
+  height: 70vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center bottom;
+     object-position: center bottom;
+}
+#page_gout .reto_titre h2 {
+  font-family: "shrikhand", "cursive";
+  padding: 2rem 1rem;
+  position: relative;
+  margin-top: -2rem;
+  background: white;
+  border-radius: 2rem 2rem 0 0;
+}
+#page_gout .reto_titre h2 i {
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#page_gout .reto_titre h2 .fas {
+  color: transparent;
+  background-image: linear-gradient(0deg, rgb(147, 86, 220), rgb(255, 121, 218));
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+#page_gout .reto_titre h2:hover .fas {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.2);
+}
+#page_gout .reto_main {
+  padding: 0 1rem;
+}
+#page_gout .cmd {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+@media (max-width: 1000px) {
+  #page_gout .cmd {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+#page_gout .cmd .cmd_catégo {
+  background-color: white;
+  overflow: hidden;
+}
+#page_gout .cmd .cmd_catégo .cmd_text {
+  display: flex;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin: 0.5rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  box-shadow: 2px 2px 2px #000000;
+}
+#page_gout .cmd .cmd_catégo .cmd_text .cmd_text_prix {
+  margin-left: auto;
+  font-weight: 900;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-end;
+}
+#page_gout .cmd .cmd_catégo .cmd_text .cmd_text_descrip {
+  padding: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#page_gout .cmd .cmd_catégo .cmd_text .cmd_text_descrip h4,
+#page_gout .cmd .cmd_catégo .cmd_text .cmd_text_descrip p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#page_gout .cmd .cmd_catégo .cmd_text .cmd_text_clic {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 0 1rem 1rem 0;
+  background-color: #99e2d0;
+  margin-right: -4rem;
+  width: 4rem;
+  transition: margin-right 0.5s;
+}
+#page_gout .cmd .cmd_catégo .cmd_text .cmd_text_clic i {
+  display: grid;
+  place-items: center;
+  background: white;
+  aspect-ratio: 1;
+  width: 2rem;
+  border-radius: 1rem;
+  color: #99e2d0;
+}
+#page_gout .cmd .cmd_catégo .cmd_text:hover {
+  cursor: pointer;
+}
+#page_gout .cmd .cmd_catégo .cmd_text:hover .cmd_text_clic {
+  margin-right: 0;
+}
+#page_gout .cmd .cmd_catégo .cmd_text:hover i {
+  animation: car 0.5s ease-in-out;
+}
+#page_gout section.rescep {
+  height: 30vh;
+  display: grid;
+  place-items: center;
+}
+#page_gout button {
+  color: white;
+  font-weight: 100;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 2px 1px 8px -3px #000000;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  background-color: #686868;
+  cursor: pointer;
+  transition-duration: 0.25s;
+  margin-top: 1rem;
+}
+#page_gout button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+.imagelanote {
+  height: 15rem;
+  background-size: cover;
+  background-image: url("./images/menu2.jpg");
+}
+
+.imagele_délice {
+  height: 15rem;
+  background-size: cover;
+  background-image: url("./images/menu4.jpg");
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,22 @@
+{
+  "name": "projet-ohmyfood",
+  "version": "1.0.0",
+  "description": "mon projet ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ignenoba/projetohmyfood.git"
+  },
+  "author": "\"Ignenoba ouakou\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ignenoba/projetohmyfood/issues"
+  },
+  "homepage": "https://github.com/ignenoba/projetohmyfood#readme",
+  "devDependencies": {
+    "sass": "^1.58.3"
+  }
+}
